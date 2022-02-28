@@ -1,12 +1,3 @@
-**Important Notice!**
-
-This repo was replaced by a [new repo](https://github.com/MicrosoftLearning/AI-900-AIFundamentals.zh-CN) on 4 February 2022 . We're making this change to improve the localized version of this content and reduce the delta between English and localized content updates. 
-After a short interval, this repo will be archived.
-
-**Contributions**
-
-At this time, we are not accepting external contributions to this repo. If you have suggestions or spot any errors, please create a pull request or report an issue on the [new repo](https://github.com/MicrosoftLearning/AI-900-AIFundamentals.zh-CN).
-
 # Microsoft Azure AI 基础知识练习
 
 此存储库包含针对 Microsoft 课程 [AI-900 *Microsoft Azure AI 基础知识*](https://docs.microsoft.com/zh-cn/learn/certifications/courses/ai-900t00)以及 [Microsoft Learn 上的自定进度模块](https://docs.microsoft.com/learn/certifications/azure-ai-fundamentals)的动手实验室练习。这些实验室配合教材提供，你可以使用其描述的方法进行练习。 
