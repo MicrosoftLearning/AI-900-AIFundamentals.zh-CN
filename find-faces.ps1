@@ -20,12 +20,14 @@ $body = "{'url' : '$img'}"
 
 write-host "Analyzing image...`n"
 $result = Invoke-RestMethod -Method Post `
-          -Uri "$endpoint/face/v1.0/detect?detectionModel=detection_01&returnFaceId=true&returnFaceAttributes=age,smile,facialHair,glasses,emotion,hair,makeup,accessories" `
+          -Uri "$endpoint/face/v1.0/detect?detectionModel=detection_01" `
           -Headers $headers `
           -Body $body | ConvertTo-Json -Depth 5
 
 $analysis = ($result | ConvertFrom-Json)
+Write-Host ("`nFrom June 21st 2022, Face service capabilities that return personally identifiable features are restricted.`nSee https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/ for details.`nThis code is restricted to returning the location of any faces detected:`n")
 foreach ($face in $analysis)
 {
-    Write-Host("Face location: $($face.faceRectangle)`n - Age:$($face.faceAttributes.age)`n - Emotions: $($face.faceAttributes.emotion)`n")
+    Write-Host("Face location: $($face.faceRectangle)`n")
 }
+
