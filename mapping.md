@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 69f8fd8920fccc0aecc4fb5d5a40e506935f8340
+ms.sourcegitcommit: 276908bd75615fb4d4712b912426129587e9c307
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "140788217"
+---
 # <a name="ai-900-trainer-lab-mapping"></a>AI-900 培训师实验室映射
 
 本课程“AI-900：AI 基础知识”中有一部分专为讲师引导式培训准备的实验室，适合 1 天的课程时间。
