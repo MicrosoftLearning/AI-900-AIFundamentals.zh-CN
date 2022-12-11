@@ -8,7 +8,7 @@ layout: home
 
 这些动手练习旨在支持 [Microsoft Learn](https://docs.microsoft.com/training/) 上的培训内容。
 
-To complete these exercises, you'll need a Microsoft Azure subscription. You can sign up for a free trial at <bpt id="p1">[</bpt><ph id="ph1">https://azure.microsoft.com</ph><ept id="p1">](https://azure.microsoft.com)</ept>.
+要完成这些练习，需要有一个 Microsoft Azure 订阅。 可在 [https://azure.microsoft.com](https://azure.microsoft.com) 注册免费试用版。
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/instructions'" %}
 | 练习 |
