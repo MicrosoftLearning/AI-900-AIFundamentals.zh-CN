@@ -126,9 +126,11 @@ lab:
 
     ![设计器资产库、搜索栏和组件图标位置的屏幕截图。](media/create-classification-model/designer-asset-library-components.png)
 
-1. 找到“规范化数据”模块，并将其放置在“diabetes-data”数据集下方的画布上。 然后，将 diabetes-data 数据集底部的输出连接到“规范化数据”模块顶部的输入，如下所示：
+1. 找到“选择数据集中的列”模块，并将其放置在“diabetes-data”数据集下方的画布上 。 然后，将 diabetes-data 数据集底部的输出连接到“选择数据集中的列”模块顶部的输入，如下所示 。
 
-    ![数据集连接到“规范化数据”模块的管道的屏幕截图。](media/create-classification-model/dataset-normalize.png)
+1. 找到“规范化”模块，并将其放置在“选择数据集中的列”模块下方的画布上 。 然后，将“选择数据集中的列”模块底部的输出连接到“规范化数据”模块顶部的输入，如下所示 ：
+
+    ![数据集连接到“选择列并规范化数据”模块的管道的屏幕截图。](media/create-classification-model/dataset-normalize.png)
 
 1. 双击“规范化数据”模块以查看其设置，请注意，需要指定转换方法和要转换的列。 
 
@@ -277,6 +279,7 @@ lab:
     
     - 为要提交的新数据添加“Web 服务输入”组件。
     - 将 diabetes-data 数据集替换为不包含标签列“Diabetic”的“手动输入数据”模块。
+    - 编辑在“选择数据集中的列”模块中选择的列。
     - 删除“评估模型”模块。
     - 在 Web 服务输出之前插入“执行 Python 脚本”模块，以便仅返回患者 ID、预测的标签值和概率。
 
@@ -293,6 +296,8 @@ lab:
 
 1. 将新的“手动输入数据”模块连接到（作为“Web 服务输出”的）“应用转换”模块的相同“数据集”输出。
 
+1. 编辑“选择数据集中的列”模块。 从所选列中移除“Diabetic”。 
+
 1. 推理管道包括“评估模型”模块，此模块对于根据新数据进行预测没有用，因此可将其删除。
 
 1. “评分模型”模块的输出包括所有输入特征以及预测的标签和概率分数。 若要将输出仅限于预测和概率，请执行以下操作：
@@ -304,7 +309,7 @@ import pandas as pd
 
 def azureml_main(dataframe1 = None, dataframe2 = None):
 
-    scored_results = dataframe1[['PatientID', 'Scored Labels', 'Scored Probabilities']]
+    scored_results = dataframe1[['Scored Labels', 'Scored Probabilities']]
     scored_results.rename(columns={'Scored Labels':'DiabetesPrediction',
                                 'Scored Probabilities':'Probability'},
                         inplace=True)
