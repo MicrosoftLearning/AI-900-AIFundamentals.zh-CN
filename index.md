@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="azure-ai-fundamentals-exercises"></a>Azure AI 基础知识练习
+# Azure AI 基础知识练习
 
 这些动手练习旨在支持 [Microsoft Learn](https://docs.microsoft.com/training/) 上的培训内容。
 
@@ -13,5 +13,5 @@ layout: home
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/instructions'" %}
 | 练习 |
 | ------- | 
-{% 表示实验室 % 中的活动}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% for activity in labs  %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
