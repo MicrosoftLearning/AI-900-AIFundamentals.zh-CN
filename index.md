@@ -10,7 +10,7 @@ layout: home
 
 要完成这些练习，需要有一个 Microsoft Azure 订阅。 可在 [https://azure.microsoft.com](https://azure.microsoft.com) 注册免费试用版。
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/instructions'" %}
+{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions'" %}
 | 练习 |
 | ------- | 
 {% for activity in labs  %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
