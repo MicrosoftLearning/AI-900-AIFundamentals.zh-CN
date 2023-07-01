@@ -3,17 +3,17 @@ lab:
   title: 探索翻译
 ---
 
-# <a name="explore-translation"></a>探索翻译
+# 探索翻译
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
 推动人类文明发展的驱动力之一是相互交流的能力。 在大多数人类工作中，通信是关键。
 
-人工智能 (AI) 可以通过在语言之间翻译文本或语音来帮助简化通信，帮助消除不同国家和文化之间的沟通障碍。
+人工智能 (AI) 可以通过在语言之间翻译文本或语音来帮助简化通信，帮助消除不同国家/地区和文化之间的沟通障碍。
 
 为了测试翻译服务的功能，我们将使用在 Cloud Shell 中运行的简单命令行应用程序。 相同的原则和功能适用于实际解决方案，如网站或手机应用。
 
-## <a name="create-a-cognitive-services-resource"></a>创建“认知服务”资源
+## 创建“认知服务”资源
 
 可通过创建“翻译器”资源或“认知服务”资源来使用翻译服务。
 
@@ -33,7 +33,7 @@ lab:
 
 1. 查看认知服务资源的“密钥和终结点”页。 需要密钥和位置，以从客户端应用程序进行连接。
 
-### <a name="get-the-key-and-location-for-your-cognitive-services-resource"></a>获取认知服务资源的密钥和位置
+### 获取认知服务资源的密钥和位置
 
 1. 等待部署完成。 然后转到认知服务资源，在“概述”页上，选择链接以管理服务的密钥。 需要密钥和位置，以从客户端应用程序连接到认知服务资源。
 
@@ -41,7 +41,7 @@ lab:
 
 > 注意：要使用翻译器服务，无需使用认知服务终结点。 仅为翻译器服务提供全局终结点。 
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 为了测试翻译服务的功能，我们将使用在 Azure 上的 Cloud Shell 中运行的简单命令行应用程序。 
 
@@ -63,7 +63,7 @@ lab:
 
     ![等待 PowerShell 启动。](media/translate-text-and-speech/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>配置和运行客户端应用程序
+## 配置和运行客户端应用程序
 
 现在，你已有一个自定义模型，可以运行使用翻译服务的简单客户端应用程序。
 
@@ -120,6 +120,6 @@ lab:
 
 1. 查看输出。 你是否看到了从英语文本到法语、意大利语和中文的翻译？  你是否看到了英语音频“hello”翻译为法语文本？
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 这个简单的应用只显示了翻译器服务的某些功能。 要详细了解此服务的更多用途，请参阅[“翻译器”页](https://docs.microsoft.com/azure/cognitive-services/translator/translator-overview)。
