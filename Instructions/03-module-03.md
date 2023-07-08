@@ -3,7 +3,7 @@ lab:
   title: 探索计算机视觉
 ---
 
-# <a name="explore-computer-vision"></a>探索计算机视觉
+# 探索计算机视觉
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -13,7 +13,7 @@ lab:
 
 在此实验室中，你将使用简单的命令行应用程序来查看计算机视觉服务的运行情况。 这些原则和功能同样适用于实际的解决方案，如网站或手机应用。
 
-## <a name="create-a-cognitive-services-resource"></a>创建认知服务资源
+## 创建认知服务资源
 
 可以通过创建“计算机视觉”资源或“认知服务”资源来使用计算机视觉服务。
 
@@ -33,7 +33,7 @@ lab:
 
 1. 查看认知服务资源的“密钥和终结点”页。 需要终结点和密钥才能从客户端应用程序进行连接。
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 为了测试计算机视觉服务的功能，我们将使用在 Azure 上的 Cloud Shell 中运行的简单命令行应用程序。
 
@@ -55,7 +55,7 @@ lab:
 
     ![等待 PowerShell 启动。](media/analyze-images-computer-vision-service/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>配置并运行客户端应用程序
+## 配置并运行客户端应用程序
 
 现在，你已经有了 Cloud Shell 环境，可以运行简单应用程序，使用计算机视觉服务来分析图像。
 
@@ -134,6 +134,6 @@ lab:
 
 1. 查看第三个图像的图像分析结果。
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 这个简单的应用仅显示计算机视觉服务的部分功能。 要详细了解此服务的更多用途，请参阅[“计算机视觉”页](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。

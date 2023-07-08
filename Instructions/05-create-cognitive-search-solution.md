@@ -3,7 +3,7 @@ lab:
   title: 探索知识挖掘
 ---
 
-# <a name="explore-knowledge-mining"></a>探索知识挖掘
+# 探索知识挖掘
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -18,7 +18,7 @@ lab:
 - 查询搜索索引
 - 查看保存到知识存储的结果
 
-## <a name="azure-resources-needed"></a>需要的 Azure 资源
+## 需要的 Azure 资源
 
 你要为 Fourth Coffee 创建的解决方案需要使用 Azure 订阅中的以下资源：
 
@@ -29,7 +29,7 @@ lab:
 
 - 一个包含 Blob 容器的存储帐户，它将存储原始文档以及表、对象或文件的其他集合。
 
-### <a name="create-an-azure-cognitive-search-resource"></a>创建 Azure 认知搜索资源
+### 创建 Azure 认知搜索资源
 
 1. 登录到 [Azure 门户](https://portal.azure.com/learn.docs.microsoft.com?azure-portal=true)。
 
@@ -45,7 +45,7 @@ lab:
 
 1. 部署完成后，选择“转到资源”。 在 Azure 认知搜索概述页面上，你可以添加索引、导入数据和搜索创建的索引。
 
-### <a name="create-a-cognitive-services-resource"></a>创建认知服务资源
+### 创建认知服务资源
 
 你需要预配一个与 Azure 认知搜索资源位于同一位置的认知服务资源。 搜索解决方案将使用该资源通过 AI 生成的见解来丰富数据存储中的数据。
 
@@ -61,7 +61,7 @@ lab:
 
 1. 等待部署完成，然后查看部署详细信息。
 
-### <a name="create-a-storage-account"></a>创建存储帐户
+### 创建存储帐户
 
 1. 返回 Azure 门户的主页，然后选择“+ 创建资源”按钮。
 
@@ -75,7 +75,7 @@ lab:
 
 1. 单击“查看”，然后单击“创建” 。 等待部署完成，然后转到已部署的资源。
 
-## <a name="upload-documents-to-azure-storage"></a>将文档上传到 Azure 存储
+## 将文档上传到 Azure 存储
 
 1. 在创建的 Azure 存储帐户的左侧菜单窗格中，选择“容器”。
 
@@ -102,7 +102,7 @@ lab:
 
 1. 上传完成后，可以关闭“上传 Blob”窗格。 现在，文档位于 coffee-reviews 存储容器中。
 
-## <a name="index-the-documents"></a>为文档编制索引
+## 为文档编制索引
 
 将文档放置在存储中后，可以使用 Azure 认知搜索从文档中提取见解。 Azure 门户提供了导入数据向导。 使用此向导，可以为支持的数据源自动创建索引和索引器。 你将使用该向导创建索引，以及将搜索文档从存储导入到 Azure 认知搜索索引中。
 
@@ -190,7 +190,7 @@ lab:
 
     ![屏幕截图显示成功创建的 coffee-indexer 索引器。](media/create-cognitive-search-solution/6a-search-indexer-success.png)
 
-## <a name="query-the-index"></a>查询索引
+## 查询索引
 
 使用搜索资源管理器编写和测试查询。 搜索资源管理器是 Azure 门户中的内置工具，提供一种用于验证搜索索引质量的简便方法。 可以使用搜索资源管理器来编写查询并查看 JSON 中的结果。
 
@@ -206,15 +206,15 @@ lab:
 
     > 注意：如果显示消息“要在门户中搜索，请在索引 CORS 设置中允许门户源”，选择“允许门户”，然后选择“搜索”   。
 
-1. 现在，让我们按位置进行筛选。 在“查询字符串”字段中输入 `search=$filter=locations eq 'Chicago'`，然后选择“搜索”。 查询将搜索索引中的所有文档，并筛选出芝加哥位置的评论。
+1. 现在，让我们按位置进行筛选。 在“查询字符串”字段中输入 `search=locations:'Chicago'`，然后选择“搜索”。 查询将搜索索引中的所有文档，并筛选出芝加哥位置的评论。
 
-1. 现在，让我们按情绪进行筛选。 在“查询字符串”字段中输入 `search=$filter=sentiment eq 'negative'`，然后选择“搜索”。 查询将搜索索引中的所有文档，并筛选出具有负面情绪的评论。
+1. 现在，让我们按情绪进行筛选。 在“查询字符串”字段中输入 `search=sentiment:'negative'`，然后选择“搜索”。 查询将搜索索引中的所有文档，并筛选出具有负面情绪的评论。
 
    > 注意：查看结果如何按 `@search.score` 排序。 这是搜索引擎给出的评分，指示结果与给定查询的匹配程度。
 
 1. 我们可能想要解决的问题之一就是某些评价存在的原因。 让我们看看与负面评价相关的关键短语。 你认为哪些原因可能会导致这种评价？
 
-## <a name="review-the-knowledge-store"></a>查看知识存储
+## 查看知识存储
 
 让我们看看运行中的知识存储的强大功能。 运行导入数据向导时，还创建了一个知识存储。 在知识存储中，你将发现由 AI 技能提取的扩充数据以投影和表的形式保存。
 
@@ -250,6 +250,6 @@ lab:
 
     查看知识存储能够从评价内容中捕获的关键短语。 许多字段都是键，因此你可关联表，例如关系数据库。 最后一个字段显示技能组提取的关键短语。
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 此简单搜索仅为 Azure 认知搜索服务的某些功能建立索引。 要详细了解此服务的用途，请参阅 [Azure 认知搜索服务页面](/azure/search/search-what-is-azure-search)。

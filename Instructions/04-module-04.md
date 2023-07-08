@@ -3,7 +3,7 @@ lab:
   title: 探索文本分析
 ---
 
-# <a name="explore-text-analytics"></a>探索文本分析
+# 探索文本分析
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -15,7 +15,7 @@ Microsoft Azure 认知服务涵盖语言服务中的文本分析功能，它提�
 
 为了测试语言服务的功能，我们将使用在 Cloud Shell 中运行的简单命令行应用程序。 相同的原则和功能适用于实际解决方案，如网站或手机应用。
 
-## <a name="create-a-cognitive-services-resource"></a>创建“认知服务”资源
+## 创建“认知服务”资源
 
 可通过创建“语言”资源或“认知服务”资源来使用语言服务。
 
@@ -33,13 +33,13 @@ Microsoft Azure 认知服务涵盖语言服务中的文本分析功能，它提�
 
 1. 查看并创建资源。
 
-### <a name="get-the-key-and-endpoint-for-your-cognitive-services-resource"></a>获取认知服务资源的密钥和终结点
+### 获取认知服务资源的密钥和终结点
 
 1. 等待部署完成。 然后转到认知服务资源，在“概述”页上，选择链接以管理服务的密钥。 需要终结点和密钥，以从客户端应用程序连接到认知服务资源。
 
 1. 查看资源的“密钥和终结点”页。 需要有密钥和终结点才能从客户端应用程序进行连接。
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 为了测试语言服务的文本分析功能，我们将使用在 Azure 上的 Cloud Shell 中运行的简单命令行应用程序。
 
@@ -61,7 +61,7 @@ Microsoft Azure 认知服务涵盖语言服务中的文本分析功能，它提�
 
     ![等待 PowerShell 启动。](media/analyze-text-language-service/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>配置和运行客户端应用程序
+## 配置和运行客户端应用程序
 
 现在，你已有一个自定义模型，可以运行使用语言服务的简单客户端应用程序。
 
@@ -154,6 +154,6 @@ Microsoft Azure 认知服务涵盖语言服务中的文本分析功能，它提�
 
 1. 查看输出。
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 这个简单的应用只显示了语言服务的部分功能。 要详细了解此服务的用途，请参阅[语言服务页面](https://azure.microsoft.com/services/cognitive-services/language-service/)。

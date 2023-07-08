@@ -3,7 +3,7 @@ lab:
   title: 探索语音
 ---
 
-# <a name="explore-speech"></a>探索语音
+# 探索语音
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -13,7 +13,7 @@ lab:
 
 为了测试语音服务的功能，我们将使用在 Cloud Shell 中运行的简单命令行应用程序。 这些原则和功能同样适用于实际的解决方案，如网站或手机应用。
 
-## <a name="create-a-cognitive-services-resource"></a>创建认知服务资源
+## 创建认知服务资源
 
 可通过创建“语音”资源或“认知服务”资源来使用语音服务。
 
@@ -31,13 +31,13 @@ lab:
 
 1. 查看并创建资源。
 
-### <a name="get-the-key-and-location-for-your-cognitive-services-resource"></a>获取认知服务资源的密钥和位置
+### 获取认知服务资源的密钥和位置
 
 1. 等待部署完成。 然后转到认知服务资源，在“概述”页上，单击链接以管理服务的密钥。 需要终结点和密钥，以从客户端应用程序连接到认知服务资源。
 
 1. 查看资源的“密钥和终结点”页。 需要位置/区域和密钥才能从客户端应用程序进行连接。
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 为了测试语音服务的功能，我们将使用在 Azure 上的 Cloud Shell 中运行的简单命令行应用程序。
 
@@ -59,7 +59,7 @@ lab:
 
     ![等待 PowerShell 启动。](media/recognize-synthesize-speech/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>配置并运行客户端应用程序
+## 配置并运行客户端应用程序
 
 现在，你已有一个自定义模型，可以运行使用语音服务的简单客户端应用程序。
 
@@ -117,6 +117,6 @@ lab:
 
     <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWMSIU" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 这个简单的应用只显示了语音服务的某些功能。 若要详细了解此服务的更多用途，请参阅[“语音”页](https://azure.microsoft.com/services/cognitive-services/speech-services/)。

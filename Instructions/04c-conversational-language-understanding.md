@@ -3,7 +3,7 @@ lab:
   title: 探索语言理解
 ---
 
-# <a name="explore-language-understanding"></a>探索语言理解
+# 探索语言理解
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -11,7 +11,7 @@ lab:
 
 为了测试对话语言理解服务的功能，我们将使用在 Cloud Shell 中运行的命令行应用程序。 相同的原则和功能适用于实际解决方案，如网站或手机应用。
 
-## <a name="create-a-language-service-resource"></a>创建“语言服务”资源
+## 创建“语言服务”资源
 
 你可以通过创建“语言服务”资源来使用对话语言理解服务。
 
@@ -30,7 +30,7 @@ lab:
 
 1. 查看并创建资源，然后等待部署完成。
 
-### <a name="create-a-conversational-language-understanding-app"></a>创建对话语言理解应用程序
+### 创建对话语言理解应用程序
 
 若要使用对话语言理解功能实现自然语言理解，请创建一个应用；然后添加实体、意图和言语来定义想要应用执行的命令。
 
@@ -61,7 +61,7 @@ lab:
 
 1. 在“检查并完成”页上，单击“创建”。
 
-### <a name="create-intents-utterances-and-entities"></a>创建意图、言语和实体
+### 创建意图、言语和实体
 
 意向是你想要执行的操作；例如，你可能需要开灯或关闭风扇。 在这种情况下，将定义两个意向：一个打开设备，另一个关闭设备。 对于每个意向，都要指定示例言语来表明用于指示意向的语言类型。
 
@@ -127,7 +127,7 @@ lab:
     | switch_off   | Switch off the fan | 设备 - 选择风扇 |
     | switch_off   | Turn the light off | 设备 - 选择灯 |
 
-### <a name="train-the-model"></a>定型模型
+### 定型模型
 
 现在，可以使用定义的意图和实体来为应用程序训练对话语言模型。
 
@@ -139,7 +139,7 @@ lab:
 
 1. 等待训练完成。 
 
-### <a name="deploy-and-test-the-model"></a>部署并测试模型
+### 部署并测试模型
 
 若要在客户端应用程序中使用训练的模型，必须将其部署为终结点，客户端应用程序将能够向其发送新言语，并且可通过该终结点预测意向和实体。
 
@@ -164,10 +164,10 @@ lab:
 
 1. 清除文本框，并在“输入自己的文本或上传文本文档”下使用以下语句测试模型：
     - *turn off the fan*
-    - *put the light on*
-    - put the fan off
+    - put the light on
+    - *put the fan off*
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 现在，让我们试试部署的模型。 为此，我们将使用一个命令行应用程序，该应用程序在 Azure 上的 Cloud Shell 中运行。 
 
@@ -191,7 +191,7 @@ lab:
 
     ![等待 PowerShell 启动。](media/conversational-language-understanding/powershell-prompt.png) 
 
-## <a name="configure-and-run-a-client-application"></a>配置和运行客户端应用程序
+## 配置和运行客户端应用程序
 
 现在，让我们打开并编辑一个预编写的脚本，它将运行客户端应用程序。
 
@@ -257,6 +257,6 @@ lab:
 
 >注意：每次需要以 ./understand.ps1 开头，后跟短语 。 在短语两边加上引号。
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 该应用只显示了语言服务的对话语言理解的部分功能。 要详细了解此服务的用途，请参阅[“对话语言理解”页](https://docs.microsoft.com/azure/cognitive-services/language-service/conversational-language-understanding/overview)。 
