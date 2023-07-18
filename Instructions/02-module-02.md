@@ -3,13 +3,13 @@ lab:
   title: 探索 Azure ML 中的自动化机器学习
 ---
 
-# <a name="explore-automated-machine-learning-in-azure-ml"></a>探索 Azure ML 中的自动化机器学习
+# 探索 Azure ML 中的自动化机器学习
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
 在本练习中，你将使用历史自行车租赁详细信息数据集来训练一个模型，该模型根据季节和气象特征预测给定日期应预期的自行车租赁数。
 
-## <a name="create-an-azure-machine-learning-workspace"></a>创建 Azure 机器学习工作区  
+## 创建 Azure 机器学习工作区  
 
 1. 使用 Microsoft 凭据登录 [Azure 门户](https://portal.azure.com?azure-portal=true)。
 
@@ -27,17 +27,15 @@ lab:
 
 1. 选择“启动工作室”（或打开新的浏览器标签页并导航到 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然后使用 Microsoft 帐户登录 Azure 机器学习工作室）。
 
-1. 如果显示“你现在的机器学习目标是什么？”消息，请选择“取消” 。
+1. 关闭显示的任何消息。
 
-1. 如果显示“欢迎使用工作室！”消息， 请选择“X”。
-
-1. 在 Azure 机器学习工作室中，应会看到新创建的工作区。 如果未看到，请单击左侧菜单上的“Microsoft”。 然后从新的左侧菜单中选择“工作区”，其中列出了与你的订阅关联的所有工作区。 选择为本练习创建的工作区。 
+1. 在 Azure 机器学习工作室中，应会看到新创建的工作区。 如果不是这样，请在左侧菜单中选择 Azure 目录。 然后，从新的左侧菜单中选择“工作区”，其中列出了与目录关联的所有工作区，并选择为此练习创建的工作区。
 
 > 注意：本模块是使用 Azure 机器学习工作区的模块之一，包括 [Microsoft Azure AI 基础知识：了解适用于机器学习的可视化工具](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/)学习路径中的其他模块。 如果你使用的是自己的 Azure 订阅，可以考虑创建一次工作区，并在其他模块中重复使用它。 只要订阅中存在 Azure 机器学习工作区，你的 Azure 订阅就要支付少量数据存储费用，因此，我们建议在不再需要 Azure 机器学习工作区时删除它。
 
-## <a name="create-compute"></a>创建计算
+## 创建计算
 
-1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，选择左上角的三条线可查看界面中的各个页面（可能需要将屏幕大小最大化）。 你可以使用左侧窗格中的这些页面来管理工作区中的资源。 选择“计算”页（在“管理”下） 。
+1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，选择左上角的 &#8801; 图标（看起来像叠起来的三条线的菜单图标）可查看界面中的各个页面（可能需要将屏幕大小最大化）。 你可以使用左侧窗格中的这些页面来管理工作区中的资源。 选择“计算”页（在“管理”下） 。
 
 1. 在“计算”页中，选择“计算群集”选项卡，然后添加具有以下设置的新计算群集 。 它将用于训练机器学习模型：
     - **位置**：选择与工作区相同的位置。如果未列出该位置，请选择最靠近你的位置。
@@ -51,18 +49,18 @@ lab:
     - 节点数下限：0
     - **节点数上限**：2
     - **缩减前的空闲秒数**：120
-    - **启用 SSH 访问**：清除
+    - 启用 SSH 访问：不启用
     - 选择“创建”
 
 > 注意：计算实例和群集是基于标准 Azure 虚拟机映像的。 对于本模块，建议使用 Standard_DS11_v2 映像以实现成本和性能的最佳平衡。 如果你的订阅配额不包含此映像，请选择其他映像；但请注意，较大的映像可能会产生较高的成本，而较小的映像可能不足以完成任务。 或者，让 Azure 管理员扩展配额。
 
 创建计算群集需要一些时间。 等待时可转到下一步。
 
-## <a name="create-a-dataset"></a>创建数据集
+## 创建数据资产
 
 1. 在 Web 浏览器的 https://aka.ms/bike-rentals[](https://aka.ms/bike-rentals?azure-portal=true) 中查看以逗号分隔的数据。
 
-1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，通过选择屏幕左上角的三条线展开左窗格。 查看“数据”页（在“资产”下）。 “数据”页包含计划在 Azure ML 中使用的特定数据文件或表。 也可以从此页面创建数据集。
+1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，通过选择屏幕左上角的菜单图标展开左窗格。 查看“数据”页（在“资产”下）。 “数据”页包含计划在 Azure ML 中使用的特定数据文件或表。 也可以从此页面创建数据集。
 
 1. 在“数据”页的“数据资产”选项卡下，选择“创建”  。 然后为数据资产配置以下设置：
     * **数据类型**：
@@ -90,11 +88,11 @@ lab:
 
 > **引文**：此数据派生自 [Capital Bikeshare](https://www.capitalbikeshare.com/system-data)，并根据已发布数据[许可协议](https://www.capitalbikeshare.com/data-license-agreement)使用。
 
-## <a name="run-an-automated-machine-learning-job"></a>运行自动化机器学习作业
+## 运行自动化机器学习作业
 
 按照后续步骤运行作业，该作业使用自动化机器学习来训练预测自行车租赁的回归模型。
 
-1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，查看“自动化 ML”页（位于“作者”下）。
+1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)中，查看“自动化 ML”页（位于“创作”下） 。
 
 1. 通过以下设置创建自动化 ML 作业：
     - **选择数据资产**：
@@ -136,13 +134,12 @@ lab:
 
 1. 请等待作业完成。 这可能需要一段时间 - 这段时间正好可以喝杯咖啡休息一下！
 
-## <a name="review-the-best-model"></a>查看最佳模型
+## 查看最佳模型
 
 1. 在自动化机器学习作业的“概述”选项卡上，记下最佳模型摘要。
     ![自动化机器学习作业的最佳模型摘要的屏幕截图，其中在算法名称周围有一个框。](media/use-automated-machine-learning/complete-run.png)
 
-    >[!NOTE]
-    > 你可能会在状态下看到消息“警告: 已达到用户指定的退出分数...”。 这是预期的消息。 请继续执行下一步。  
+    > 注意：你可能会在状态下看到消息“警告: 已达到用户指定的退出分数...”。 这是预期的消息。 请继续执行下一步。  
 1. 选择最佳模型的“算法名称”下的文本，以查看其详细信息。
 
 1. 在“标准均方根误差”值旁边，选择“查看所有其他指标”以查看回归模型的其他可能评估指标的值。
@@ -158,7 +155,7 @@ lab:
 
     ![“说明”选项卡上特征重要性图表的屏幕截图。](media/use-automated-machine-learning/feature-importance.png)
 
-## <a name="deploy-a-predictive-service"></a>部署预测服务
+## 部署预测服务
 
 1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)的“自动化 ML”页上，选择自动化机器学习作业。
 
@@ -177,7 +174,7 @@ lab:
 1. 在 Azure 机器学习工作室中的左侧菜单上，选择“终结点”。
     ![左侧菜单中终结点位置的屏幕截图。](media/use-automated-machine-learning/find-endpoints.png)
 
-## <a name="test-the-deployed-service"></a>测试已部署的服务
+## 测试已部署的服务
 
 现在，可以测试已部署的服务。
 
@@ -221,15 +218,14 @@ lab:
 
 你刚刚测试了一个服务，该服务已准备好通过“使用”选项卡中的凭据连接到客户端应用程序。我们将在这里结束本实验室。 欢迎继续使用刚刚部署的服务进行试验。
 
-## <a name="clean-up"></a>清理
+## 清理
 
-你创建的 Web 服务托管于“Azure 容器实例”中。 如果不打算进一步试验它，应删除终结点以避免产生不必要的 Azure 使用量。 此外，在再次需要计算实例之前，还应停止该实例。
+你创建的 Web 服务托管于“Azure 容器实例”中。 如果不打算进一步试验它，应删除终结点以避免产生不必要的 Azure 使用量。 还应删除计算群集。
 
 1. 在 [Azure 机器学习工作室](https://ml.azure.com?azure-portal=true)的“终结点”选项卡上，选择“predict-rentals”终结点。 然后选择“删除”，并确认是否要删除该终结点。
-2. 在“计算”页上的“计算实例”选项卡上，选择计算实例，然后选择“停止”。
+2. 在“计算”页上的“计算群集”选项卡上，选择计算实例，然后选择“删除”  。
 
->[!NOTE]
-> 停止计算可确保不会向你的订阅收取计算资源的费用。 但是，只要订阅中存在 Azure 机器学习工作区，就会向你收取少量数据存储费用。 如果已完成对 Azure 机器学习的探索，可以删除 Azure 机器学习工作区和关联的资源。 但是，如果计划完成本系列中任何其他实验室，则需要重新创建它。
+> 注意：删除计算可确保不会向你的订阅收取计算资源的费用。 但是，只要订阅中存在 Azure 机器学习工作区，就会向你收取少量数据存储费用。 如果已完成对 Azure 机器学习的探索，可以删除 Azure 机器学习工作区和关联的资源。 但是，如果计划完成本系列中任何其他实验室，则需要重新创建它。
 >
 > 删除工作区的步骤：
 > 1. 在 [Azure 门户](https://portal.azure.com?azure-portal=true)的“资源组”页中，打开在创建 Azure 机器学习工作区时指定的资源组。
