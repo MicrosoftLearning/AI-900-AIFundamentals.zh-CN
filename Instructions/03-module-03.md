@@ -136,4 +136,4 @@ lab:
 
 ## 了解更多
 
-这个简单的应用仅显示计算机视觉服务的部分功能。 要详细了解此服务的更多用途，请参阅[“计算机视觉”页](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
+这个简单的应用仅显示计算机视觉服务的部分功能。 要详细了解此服务的更多用途，请参阅[“计算机视觉”页](https://azure.microsoft.com/products/ai-services?activetab=pivot:visiontab)。
