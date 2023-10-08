@@ -3,7 +3,7 @@ lab:
   title: 探索表单识别
 ---
 
-# <a name="explore-form-recognition"></a>探索表单识别
+# 探索表单识别
 
 > 注意：要完成此实验室，需要一个你在其中具有管理权限的 [Azure 订阅](https://azure.microsoft.com/free?azure-portal=true)。
 
@@ -15,15 +15,15 @@ lab:
 
 为了测试表单识别器服务的功能，我们将使用在 Cloud Shell 中运行的简单命令行应用程序。 相同的原则和功能适用于实际解决方案，如网站或手机应用。
 
-## <a name="create-a-cognitive-services-resource"></a>创建认知服务资源
+## 创建 Azure AI 服务资源
 
-可通过创建“表单识别器”资源或“认知服务”资源来使用表单识别器服务。
+可通过创建“表单识别器”资源或“Azure AI 服务”资源来使用表单识别器服务 。
 
-如果尚未这样做，可在 Azure 订阅中创建“认知服务”资源。
+在 Azure 订阅中创建一个 Azure AI 服务资源（如果尚未这样做）。
 
 1. 在另一个浏览器选项卡中，打开 Azure 门户 ([https://portal.azure.com](https://portal.azure.com?azure-portal=true))，并登录 Microsoft 帐户。
 
-1. 单击“&#65291;创建资源”按钮，搜索“认知服务”，然后通过以下设置创建“认知服务”资源：
+1. 单击“&#65291;创建资源”按钮，然后搜索“Azure AI 服务”。 选择创建一个 Azure AI 服务计划。 随后你会转到一个页面，可在其中创建 Azure AI 服务资源。 使用以下设置对其进行配置：
     - **订阅**：Azure 订阅。
     - **资源组**：选择或创建具有唯一名称的资源组。
     - **区域**：选择任何可用区域。
@@ -33,9 +33,9 @@ lab:
 
 1. 查看并创建资源，然后等待部署完成。 然后，转到部署的资源。
 
-1. 查看认知服务资源的“密钥和终结点”页。 需要终结点和密钥才能从客户端应用程序进行连接。
+1. 查看 Azure AI 服务资源的“密钥和终结点”页。 需要终结点和密钥才能从客户端应用程序进行连接。
 
-## <a name="run-cloud-shell"></a>运行 Cloud Shell
+## 运行 Cloud Shell
 
 为了测试表单识别器服务的功能，我们将使用在 Azure 上的 Cloud Shell 中运行的简单命令行应用程序。 
 
@@ -57,7 +57,7 @@ lab:
 
     ![等待 PowerShell 启动。](media/analyze-receipts/powershell-prompt.png) 
 
-## <a name="configure-and-run-a-client-application"></a>配置和运行客户端应用程序
+## 配置和运行客户端应用程序
 
 现在，你已有一个自定义模型，可以运行使用表单识别器服务的简单客户端应用程序。
 
@@ -83,7 +83,7 @@ lab:
 
     ![该编辑器包含用于分析回执中字段的代码。](media/analyze-receipts/recognize-receipt-code.png)
 
-1. 不要太担心代码的细节，重要的是它需要终结点 URL 和认知服务资源的任何一个密钥。 从 Azure 门户中的资源的“密钥和终结点”页复制这些信息，并将它们粘贴到代码编辑器，分别替换 YOUR_KEY 和 YOUR_ENDPOINT 占位符值。
+1. 不要太担心代码的细节，重要的是它需要终结点 URL 和 Azure AI 服务资源的其中一个密钥。 从 Azure 门户中的资源的“密钥和终结点”页复制这些信息，并将它们粘贴到代码编辑器，分别替换 YOUR_KEY 和 YOUR_ENDPOINT 占位符值。
 
     > 提示：使用“密钥和终结点”和“编辑器”窗格时，可能需要使用分隔条来调整屏幕区域  。
 
@@ -109,6 +109,6 @@ lab:
 
 1. 查看返回的结果。 从结果可了解到，表单识别器可以解释表单中的数据，正确识别商家地址和电话号码，以及交易日期和时间，还有明细项目、小计、税款和总金额。
 
-## <a name="learn-more"></a>了解更多
+## 了解更多
 
 这个简单的应用仅显示计算机视觉服务的部分表单识别器功能。 要详细了解此服务的更多用途，请参阅[“表单识别器”页](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/overview)。
