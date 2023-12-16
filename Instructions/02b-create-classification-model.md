@@ -21,7 +21,7 @@ lab:
     - **Application Insightss**：记下要为工作区创建的默认新 Application Insights 资源。
     - 容器注册表：无（第一次将模型部署到容器时，将自动创建一个）
 
-1. 依次选择“查看 + 创建”、“创建”。   等待工作区创建完成（可能需要几分钟时间），然后转到部署的资源。
+1. 依次选择“查看 + 创建”、“创建”。 等待工作区创建完成（可能需要几分钟时间），然后转到部署的资源。
 
 1. 选择“启动工作室”（或打开新的浏览器标签页并导航到 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然后使用 Microsoft 帐户登录 Azure 机器学习工作室）。
 
@@ -72,7 +72,7 @@ lab:
         - **编码**：UTF-8
         - 列标题：只有第一个文件有标题
         - **跳过行**：无
-        -               数据集包含多行数据：不选择
+        - 数据集包含多行数据：不选择
     - **架构**：
         - 包含除“路径”以外的所有列
         - 查看自动检测的类型
@@ -93,7 +93,7 @@ lab:
 
     ![设计器资产库、搜索栏和数据图标位置的屏幕截图。](media/create-classification-model/designer-asset-library-data.png)
 
-1. 选择“数据”。 搜索“diabetes-data”数据集并将其放置在画布上。
+1. 选择**数据**。 搜索“diabetes-data”数据集并将其放置在画布上。
 
 1. 右键单击（在 Mac 上，按住 Ctrl 并单击）画布上的“diabetes-data”数据集，然后选择“预览数据” 。
 
@@ -183,7 +183,7 @@ Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsul
 1. 选择“拆分数据”模块，并按如下所示配置其设置：
     - **拆分模式**：拆分行
     - **第一个输出数据集中的行部分**：0.7
-    -               随机拆分：True
+    - 随机拆分：True
     - **随机种子**：123
     - **分层拆分**：False
 
@@ -240,8 +240,8 @@ Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsul
 1. 向下滚动以查看模型的混淆矩阵。 观察每个可能类的预测值和实际值计数。 
 
 1. 查看混淆矩阵左侧的指标，其中包括：
-    -               准确度：换句话说，模型的糖尿病预测的正确比例是多少？
-    -               精准率：换句话说，在所有模型预测患有糖尿病的患者中，模型正确预测的时间百分比。 
+    - 准确度：换句话说，模型的糖尿病预测的正确比例是多少？
+    - 精准率：换句话说，在所有模型预测患有糖尿病的患者中，模型正确预测的时间百分比。 
     - 召回率：换句话说，在所有实际患有糖尿病的患者中，模型正确识别了多少糖尿病病例？
     - F1 分数
 
@@ -261,7 +261,7 @@ Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsul
 
 1. 在“创建推理管道”下拉列表中，选择“实时推理管道” 。 几秒钟后，将打开名为“糖尿病训练实时推理”的新版本管道。
 
-1. 将新管道重命名为“预测糖尿病”，然后查看新管道。 此管道中包含某些转换和训练步骤。 训练的模型将用于对新数据进行评分。 管道还包含用于返回结果的 Web 服务输出。
+1. 将新管道重命名为“预测糖尿病”，然后查看新管道****。 此管道中包含某些转换和训练步骤。 训练的模型将用于对新数据进行评分。 管道还包含用于返回结果的 Web 服务输出。
 
     将对推理管道进行以下更改：
 
@@ -316,7 +316,7 @@ Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsul
 
 1. 返回到“作业”选项卡。在此处，选择“mslearn-diabetes-inference”实验，然后选择“预测糖尿病”作业  。
 
-1. 管道完成后，选择“执行 Python 脚本”模块。 选择“预览数据”并选择“结果数据集”以查看输入数据中三个患者观察值的预测标签和概率。 
+1. 管道完成后，选择“执行 Python 脚本”模块。 选择“预览数据”并选择“结果数据集”以查看输入数据中三个患者观察值的预测标签和概率。
 
 你的推理管道会根据患者的特征预测患者是否有患糖尿病的风险。 现在，你已准备好发布管道，以便客户端应用程序可以使用它。
 
@@ -328,11 +328,11 @@ Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsul
 
 1. 在“预测糖尿病”作业窗口的顶部，选择“部署”。
 
-    ![“预测汽车价格”推理管道的“部署”按钮的屏幕截图。](media/create-classification-model/deploy-screenshot.png)
+    ![屏幕截图显示“预测汽车价格”推理管道的“部署”按钮。](media/create-classification-model/deploy-screenshot.png)
 
 1. 在“设置实时终结点”中，选择“部署新的实时终结点”，并使用以下设置 ：
     - 名称：predict-diabetes
-    -               说明：对糖尿病进行分类
+    - 说明：对糖尿病进行分类
     - **计算类型**：Azure 容器实例
 
 1. 选择“部署”，然后等待 Web 服务部署完成 - 这可能需要几分钟。
